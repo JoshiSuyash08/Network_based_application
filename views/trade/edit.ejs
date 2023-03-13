@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class="center-container">
+        <form action = '/trades/<%= trade.id%>?_method=PUT' method = 'POST' class="mt-20">
+            <label for="topic">Topic</label>
+            <input type="text" id="topic" name="topic" placeholder="Enter topic.." value="<%= trade.topic %>">
+
+            <label for="name">Title</label>
+            <input type="text" id="name" name="name" placeholder="Enter title.." value="<%= trade.name %>">
+
+            <label for="hostname">Host</label>
+            <input type="text" id="hostname" name="hostname" placeholder="Enter host.." value="<%= trade.hostname %>">
+
+            <label for="details">Detail</label>
+            <textarea id="details" name="details" placeholder="Enter detail.."><%= trade.details %></textarea>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Enter location.." value="<%= trade.location %>">
+        
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" value="<%= trade.date %>">
+
+            <label for="startTime">Start Time</label>
+            <input type="time" id="startTime" name="startTime" value="<%= trade.startTime %>"> 
+
+            <label for="endTime">End Time</label>
+            <input type="time" id="endTime" name="endTime" value="<%= trade.endTime %>">
+
+            <label for="image">Image URL</label>
+            <input type="url" id="image" name="image" placeholder="Enter image url.." value="<%= trade.image %>">
+        
+            <button class="button submit-btn mb-100">Update trade</button>
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>
